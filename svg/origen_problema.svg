@@ -36,11 +36,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.2905668"
-     inkscape:cx="185.25776"
-     inkscape:cy="151.40788"
+     inkscape:zoom="6.0677778"
+     inkscape:cx="232.79791"
+     inkscape:cy="231.98188"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4292"
      showgrid="false"
      units="cm"
      inkscape:window-width="1920"
@@ -197,7 +197,7 @@
          xml:space="preserve"
          id="flowRoot4322"
          style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         transform="translate(205.93027,946.67285)"><flowRegion
+         transform="translate(205.93027,942.56702)"><flowRegion
            id="flowRegion4324"><rect
              id="rect4326"
              width="98.742386"
@@ -205,67 +205,75 @@
              x="24.181812"
              y="21.830805" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium'"
-           id="flowPara4328">Gráficas</flowPara></flowRoot>    </g>
-    <g
-       id="g4306"
-       transform="translate(0,5.289525)">
-      <path
-         sodipodi:nodetypes="sssssssss"
-         inkscape:connector-curvature="0"
-         id="rect4330"
-         d="m 301.86564,769.35815 112.53191,0 c 5.63894,0 10.1786,4.53966 10.1786,10.1786 l 0,40.2027 c 0,5.63895 -4.53966,10.1786 -10.1786,10.1786 l -112.53191,0 c -5.63894,0 -10.1786,-4.53965 -10.1786,-10.1786 l 0,-40.2027 c 0,-5.63894 4.53966,-10.1786 10.1786,-10.1786 z"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <flowRoot
-         transform="translate(272.81867,773.79653)"
+           id="flowPara4328">Gráficas</flowPara></flowRoot>      <flowRoot
+         transform="translate(194.98245,952.9847)"
          style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="flowRoot4332"
+         id="flowRoot4303"
          xml:space="preserve"><flowRegion
-           id="flowRegion4334"><rect
-             style="text-align:center;text-anchor:middle"
-             rx="0"
-             ry="0"
-             y="24.136868"
-             x="24.070055"
-             height="27.7113"
-             width="120.94986"
-             id="rect4336" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:7.5px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium';text-align:center;text-anchor:middle"
-           id="flowPara4338">Índice cromático de descomposiciones de la gráfica geométrica completa, en subgráficas inducidas.</flowPara></flowRoot>      <path
-         sodipodi:nodetypes="sssssssss"
-         inkscape:connector-curvature="0"
-         id="path4340"
-         d="m 301.86565,769.35812 112.53191,0 c 5.63895,0 10.1786,4.53965 10.1786,10.1786 l 0,2.86433 c 0,5.63895 -4.53965,10.17861 -10.1786,10.17861 l -112.53191,0 c -5.63894,0 -10.1786,-4.53966 -10.1786,-10.17861 l 0,-2.86433 c 0,-5.63895 4.53966,-10.1786 10.1786,-10.1786 z"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <flowRoot
-         transform="translate(272.35095,753.27897)"
-         style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="flowRoot4342"
-         xml:space="preserve"><flowRegion
-           id="flowRegion4344"><rect
+           id="flowRegion4305"><rect
              y="21.830805"
              x="24.181812"
-             height="13.770195"
-             width="100.42168"
-             id="rect4346" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium'"
-           id="flowPara4348">Gráficas geométricas</flowPara></flowRoot>    </g>
-    <g
+             height="11.624763"
+             width="121.11705"
+             id="rect4307" /></flowRegion><flowPara
+           id="flowPara4309"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:7.5px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium'">[G. Araujo-Pardo, A. Vázquez-Ávila]</flowPara></flowRoot>    </g>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 301.86564,770.06501 112.53191,0 c 5.63894,0 10.1786,4.53966 10.1786,10.17859 l 0,44.78538 c 0,5.63895 -4.53966,10.1786 -10.1786,10.1786 l -112.53191,0 c -5.63894,0 -10.1786,-4.53966 -10.1786,-10.1786 l 0,-44.78538 c 0,-5.63894 4.53966,-10.17859 10.1786,-10.17859 z"
+       id="rect4330"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssss" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4332"
+       style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(272.81867,779.08605)"><flowRegion
+         id="flowRegion4334"><rect
+           id="rect4336"
+           width="120.94986"
+           height="27.7113"
+           x="24.070055"
+           y="24.136868"
+           ry="0"
+           rx="0"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4338"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:7.5px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium';text-align:center;text-anchor:middle">Índice cromático de descomposiciones de la gráfica geométrica completa, en subgráficas inducidas.</flowPara></flowRoot>    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 301.86565,770.06497 112.53191,0 c 5.63895,0 10.1786,4.53966 10.1786,10.1786 l 0,7.447 c 0,5.63895 -4.53965,10.17862 -10.1786,10.17862 l -112.53191,0 c -5.63894,0 -10.1786,-4.53967 -10.1786,-10.17862 l 0,-7.447 c 0,-5.63895 4.53966,-10.1786 10.1786,-10.1786 z"
+       id="path4340"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssss" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4342"
+       style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(283.50708,750.66611)"><flowRegion
+         id="flowRegion4344"><rect
+           id="rect4346"
+           width="100.42168"
+           height="13.770195"
+           x="24.181812"
+           y="21.830805" /></flowRegion><flowPara
+         id="flowPara4348"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium'">Gráficas geométricas</flowPara></flowRoot>    <g
        id="g4292"
        transform="translate(0,8.66329)">
       <path
          sodipodi:nodetypes="sssssssss"
          inkscape:connector-curvature="0"
          id="rect4290"
-         d="m 148.20912,771.98437 96.5319,0 c 5.63895,0 10.1786,4.53966 10.1786,10.17861 l 0,28.20269 c 0,5.63895 -4.53965,10.1786 -10.1786,10.1786 l -96.5319,0 c -5.63895,0 -10.1786,-4.53965 -10.1786,-10.1786 l 0,-28.20269 c 0,-5.63895 4.53965,-10.17861 10.1786,-10.17861 z"
+         d="m 148.20912,767.98437 96.5319,0 c 5.63895,0 10.1786,4.53966 10.1786,10.17861 l 0,32.20269 c 0,5.63895 -4.53965,10.1786 -10.1786,10.1786 l -96.5319,0 c -5.63895,0 -10.1786,-4.53965 -10.1786,-10.1786 l 0,-32.20269 c 0,-5.63895 4.53965,-10.17861 10.1786,-10.17861 z"
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <path
          sodipodi:nodetypes="sssssssss"
          inkscape:connector-curvature="0"
          id="path4300"
-         d="m 148.20911,771.98438 96.53191,0 c 5.63895,0 10.1786,4.53965 10.1786,10.1786 l 0,2.86433 c 0,5.63895 -4.53965,10.17861 -10.1786,10.17861 l -96.53191,0 c -5.63894,0 -10.1786,-4.53966 -10.1786,-10.17861 l 0,-2.86433 c 0,-5.63895 4.53966,-10.1786 10.1786,-10.1786 z"
+         d="m 148.20911,767.98438 96.53191,0 c 5.63895,0 10.1786,4.53965 10.1786,10.1786 l 0,6.86433 c 0,5.63895 -4.53965,10.17861 -10.1786,10.17861 l -96.53191,0 c -5.63894,0 -10.1786,-4.53966 -10.1786,-10.17861 l 0,-6.86433 c 0,-5.63895 4.53966,-10.1786 10.1786,-10.1786 z"
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <flowRoot
-         transform="translate(122.89713,755.90523)"
+         transform="translate(122.89713,747.90523)"
          style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="flowRoot4302"
          xml:space="preserve"><flowRegion
@@ -295,7 +303,19 @@
            id="flowPara4195"
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:7.5px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium';text-align:center;text-anchor:middle">Número cromático de un <flowSpan
    id="flowSpan4243"
-   style="font-style:oblique;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium Oblique'">n</flowSpan>-cluster.</flowPara></flowRoot>    </g>
+   style="font-style:oblique;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium Oblique'">n</flowSpan>-cluster.</flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4292"
+         style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         transform="translate(118.65077,759.90523)"><flowRegion
+           id="flowRegion4294"><rect
+             id="rect4296"
+             width="107.29975"
+             height="11.437928"
+             x="24.181812"
+             y="21.830805" /></flowRegion><flowPara
+           id="flowPara4298"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:7.5px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium'">[D. Romero, A. Sánchez-Arroyo]</flowPara></flowRoot>    </g>
     <circle
        style="fill-opacity:1;"
        id="path4331"
@@ -851,5 +871,17 @@
        id="path4639"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
-  </g>
+    <flowRoot
+       transform="translate(274.94793,763.97865)"
+       style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4284"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4286"><rect
+           y="21.830805"
+           x="24.181812"
+           height="10.740291"
+           width="118.01842"
+           id="rect4288" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:7.5px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif Medium'"
+         id="flowPara4290">[H. Clemens, D. Lara, C. Rubio]</flowPara></flowRoot>  </g>
 </svg>

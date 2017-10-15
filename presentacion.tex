@@ -4,6 +4,7 @@
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{enumitem}
 \usepackage{graphicx,caption}
+\usepackage{tikz}
 
 \setitemize{label=\usebeamerfont*{itemize item}%
   \usebeamercolor[fg]{itemize item}
@@ -21,8 +22,12 @@
 }
 \beamertemplatenavigationsymbolsempty
 \setbeamertemplate{footline}[frame number]
+\setbeamertemplate{theorems}[numbered]
 
-\title{Tamaño máximo de una thrackle de triángulos}
+\newtheorem{teo}{Teorema}
+\newtheorem{conj}{Conjetura}
+
+\title{Tamaño máximo de un thrackle de triángulos}
 \author [Santiago León O.] {Santiago León Ortiz\\ {\small Asesora: Dra. Dolores Lara Cuevas}}
 \institute [Cinvestav, Computación] { }
 
@@ -40,9 +45,38 @@
   \maketitle
 \end{frame}
 
-\begin{frame}[allowframebreaks]
-  \frametitle{Definiciones}
-  \begin{block}{\textit{Intersección de triángulos}}
+\begin{frame}
+  \frametitle{Thrackles de triángulos}
+  \begin{figure}[htb]
+    \includegraphics{thrackles.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{¿Cuántos conjuntos de puntos hay?}
+  Hay un número infinito de formas de elegir un sólo punto en el plano.
+  \begin{figure}[htb]
+    \includegraphics<1>{puntos.pdf}
+    \includegraphics<2>{puntos_1.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tipos de orden}
+  \begin{block}{}
+    Son clases de equivalencia de conjuntos de puntos que comparten las mismas
+    propiedades combinatorias.
+  \end{block}
+  \begin{figure}[htb]
+    \includegraphics<1>{tipos_de_orden.pdf}
+    \includegraphics<2>{tipos_de_orden_1.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Intersección de triángulos}
+
+  \begin{block}{}
     Dos triángulos con vértices en un conjunto de puntos, sin aristas en común,
     se \emph{intersectan}, si tienen un vértice en común, o sus aristas se
     cruzan.
@@ -51,7 +85,11 @@
     \centering
     \input{interseccion_triangulos.pdf_tex}
   \end{figure}
-  \begin{block}{\textit{Thrackle de triángulos}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Thrackle de triángulos}
+  \begin{block}{}
     Es un conjunto $T$ de $k$ triángulos dibujados sobre un conjunto de
     puntos que cumple las siguientes propiedades:
     \begin{enumerate}
@@ -127,7 +165,7 @@
 \begin{frame}
   \frametitle{¿Qué se sabe hasta ahora?, cota superior}
   Caracterización de los segmentos restantes en un conjunto de triángulos
-  disjuntos en aristas de tamaño máximo.
+  disjuntos en aristas de tamaño máximo [H. Hanani 1975].
   \begin{figure}[htb]
     \scriptsize
     \input{hanani.pdf_tex}
@@ -203,17 +241,27 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Orden de los triángulos}
+  \begin{figure}[htb]
+    \includegraphics<1>{orden_de_triangulos.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
   \frametitle{Resultados de la ejecución, para $n=8$}
   La ejecución del Algoritmo 1 para cada conjunto de puntos, utilizando un
   procesador Intel Core i7, arrojó los siguientes resultados:
   \begin{itemize}[leftmargin=1cm]
     \item Existe un thrackle de tamaño 8 para cada conjunto de 8 puntos.
-      \begin{itemize}[leftmargin=1cm]
-        \item[$\implies$] Un thrackle sobre un conjunto de 8 puntos tiene máximo 8 triángulos.
-      \end{itemize}
     \item Nodos recorridos: $\sim$7,838.63 en promedio
     \item Tiempo: 1.34 segundos (0.404 ms en promedio)
   \end{itemize}
+
+  \pause
+  \vspace{0.5cm}
+  \begin{teo}
+    Un thrackle sobre un conjunto de 8 puntos tiene máximo 8 triángulos.
+  \end{teo}
 \end{frame}
 
 \begin{frame}
@@ -224,10 +272,6 @@
   Algoritmo 2 es un versión modificada del anterior que explora el árbol
   completamente y almacena el tamaño máximo de los thrackles.
   \vspace{0.3cm}
-  \begin{itemize}[leftmargin=1.5cm]
-    \item[$\implies$] Un thrackle sobre un conjunto de 9 puntos tiene máximo 10 triángulos.
-  \end{itemize}
-  \vspace{0.3cm}
 
   La ejecución tuvo las siguientes características:
   \begin{itemize}[leftmargin=1cm]
@@ -235,6 +279,12 @@
     \item Tiempo: $\sim9$ horas 57 minutos (225.5 ms en promedio)
     \item Memoria: Máximo $148.8$ MB por conjunto de puntos
   \end{itemize}
+
+  \vspace{0.3cm}
+  \pause
+  \begin{teo}
+    Un thrackle sobre un conjunto de 9 puntos tiene máximo 10 triángulos.
+  \end{teo}
 \end{frame}
 
 %\begin{frame}
@@ -256,34 +306,51 @@
         \item[$\implies$] 5.84 años para explorar todos los conjuntos de puntos.
       \end{itemize}
   \end{itemize}
-  \vspace{0.3cm}
-  Varias ejecuciones del Algoritmo 1 prueban lo siguiente:
-  \begin{itemize}
-    \item Todo conjunto de 10 puntos tiene un thrackle con 11 triángulos.
-      \begin{itemize}[leftmargin=1cm]
-        \item (Ejecución de 35 minutos).
-      \end{itemize}
-    \item Aproximadamente 79,712 conjuntos de 10 puntos no tienen un thrackle con 12 triángulos.
-      \begin{itemize}[leftmargin=1cm]
-        \item (Ejecución de 30 horas).
-      \end{itemize}
-  \end{itemize}
+  \begin{overprint}
+    \onslide<1>
+    Con varias ejecuciones del Algoritmo 1 se obtuvo que:
+    \begin{itemize}
+      \item Todo conjunto de 10 puntos tiene un thrackle con 11 triángulos.
+        \begin{itemize}[leftmargin=1cm]
+          \item (Ejecución de 35 minutos).
+        \end{itemize}
+      \item Aproximadamente 79,712 conjuntos de 10 puntos (0.56\%) no tienen un
+        thrackle con 12 triángulos.
+        \begin{itemize}[leftmargin=1cm]
+          \item (Ejecución de 30 horas).
+        \end{itemize}
+    \end{itemize}
+    \onslide<2>
+    \begin{teo}
+      Todo conjunto de 10 puntos tiene un thrackle de tamaño 11.
+    \end{teo}
+    \vspace{0.5cm}
+    \begin{teo}
+      Hay thrackles cuyo tamaño máximo es 11.
+    \end{teo}
+  \end{overprint}
 \end{frame}
 
 \begin{frame}
   \frametitle{¿Cuánto tarda el Algoritmo 2?}
-  \begin{itemize}
-  \item El número de iteraciones es al menos igual al número de thrackles
-    distintos.
-  \item El peor caso ocurre para el conjunto de puntos con mayor número de
-    thrackles distintos.
-  \end{itemize}
-      \begin{figure}[htb]
-        \centering
-        \def\svgwidth{10cm}
-        \input{2-convex_n_8.pdf_tex}
-      \end{figure}
-  ¿Son siempre convexos, o 2-convexos?
+  \begin{overprint}
+    \onslide<1>
+    \begin{itemize}
+      \item El número de iteraciones es al menos igual al número de thrackles
+        distintos.
+      \item El peor caso ocurre para el conjunto de puntos con mayor número de
+        thrackles distintos.
+    \end{itemize}
+    \onslide<2>
+    \begin{conj}
+      Los conjuntos de puntos con mayor número de thrackles son 2-convexos
+    \end{conj}
+  \end{overprint}
+  \begin{figure}[htb]
+    \centering
+    \def\svgwidth{10cm}
+    \input{2-convex_n_8.pdf_tex}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[c]
@@ -302,27 +369,34 @@
 \begin{frame}[t]
   \frametitle{Construcción para todo $n$}
   Se extendió la cota inferior del tamaño de un thrackle, para incluir los
-  casos en que $n\not\equiv0 \pmod3$.
+  casos en que $3\nmid n$.
 
-  \begin{figure}[htb]
-    \centering
-    \begin{textblock}{5}(4,2.4)
-      \def\svgwidth{5cm}
-      \input{3_n-1.pdf_tex}
-    \end{textblock}
-
-    \begin{textblock}{5.5}(0.2,4.8)
-      \def\svgwidth{5.5cm}
-      \input{3_n-2-impar.pdf_tex}
-    \end{textblock}
-
-    \begin{textblock}{5.5}(7,4.8)
-      \def\svgwidth{5.5cm}
-      \input{3_n-2-par.pdf_tex}
-    \end{textblock}
-  \end{figure}
-  \vspace{5.3cm}
-  Para todos los casos el tamaño es menor (pero cercano) a $\frac{n^2}{9}+2$.
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \begin{figure}
+        \def\svgwidth{5cm}
+        \input{3_n.pdf_tex}
+        Caso $3|n$.
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{teo}
+        Todo conjunto de $n$ puntos en el plano en posición convexa, con $n\ge6$,
+        tiene un thrackle de triángulos, cuyo tamaño $k(n)$ es: 
+        \[
+          k(n) = 
+          \begin{cases}
+            \frac{n^2}{9}+1 &\ \text{si}\ 3|n \\
+            \frac{n^2}{9}-\frac{n}{18}+\frac{35}{18} &\ \text{si}\ 6|n-1 \\
+            \frac{n^2}{9}-\frac{n}{18}+\frac{13}{9}  &\ \text{si}\ 6|n-4 \\
+            \frac{n^2}{9}-\frac{n}{9}+\frac{7}{9}   &\ \text{si}\ 6|n-5 \\
+            \frac{n^2}{9}-\frac{n}{9}+\frac{16}{9}   &\ \text{si}\ 6|n-2
+          \end{cases}
+        \]
+      \end{teo}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -349,7 +423,7 @@
       \end{center}
     \end{column}
     \begin{column}{0.7\textwidth}
-      \begin{block}{Cantidad mínima de thrackles}
+      \begin{block}{Número mínimo de thrackles}
         Hay al menos
         $$(p(n/3)-p(n/3-1))\frac{(\frac{n}{3})!\cdot6^{\frac{n}{3}-2}\cdot2^{\frac{n}{6}-1}}{(\frac{n}{6})!\binom{n/3}{2}}$$
         thrackles de triángulos distintos, para $n$ puntos en posición
@@ -363,28 +437,54 @@
 \begin{frame}
   \frametitle{Orden de triángulos en posición convexa}
   El Algoritmo 1 tiene mejor tiempo de ejecución si ordenamos los triángulos.
-  \begin{figure}[htb]
-    \centering
-    \input{orden_triangulos.pdf_tex}
-  \end{figure}
+  \begin{overprint}
+    \onslide<1>
+    \begin{figure}[htb]
+      \centering
+      \input{orden_triangulos.pdf_tex}
+    \end{figure}
+    \onslide<2>
+    \begin{figure}[htb]
+      \centering
+      \input{orden_triangulos_1.pdf_tex}
+    \end{figure}
+    \onslide<3>
+    \begin{figure}[htb]
+      \centering
+      \input{orden_triangulos_2.pdf_tex}
+    \end{figure}
+    \begin{itemize}
+      \item Acelera búsquedas utilizando el Algoritmo 1 (pero no del Algoritmo 2).
+      \item ¿Puede generalizarse a conjuntos de puntos en posición convexa?
+    \end{itemize}
+  \end{overprint}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Orden de triángulos en posición convexa}
-  El Algoritmo 1 tiene mejor tiempo de ejecución si ordenamos los triángulos.
-  \begin{figure}[htb]
-    \centering
-    \input{orden_triangulos_1.pdf_tex}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Conclusiones y trabajo futuro}
+  \frametitle{Conclusiones}
   \begin{itemize}
     \item Encontramos evidencia para creer que el tamaño máximo de un thrackle
-      de triángulos es a lo sumo el valor conjeturado de $\frac{n^2}{9}+2$.
+      de triángulos sobre un conjunto de $n$ puntos es a lo sumo el valor
+      conjeturado de $\frac{n^2}{9}+2$.
+      \begin{itemize}
+          \item La conjetura es cierta para $3\le n\le 9$.
+          \item La cota inferior hallada nunca excede el valor conjeturado pero
+            es cercana.
+      \end{itemize}
     \item La complejidad computacional de una búsqueda exhaustiva crece bastante
       rápido.
+      \begin{itemize}
+          \item Para $n=10$ se podría realizar una búsqueda utilizando
+            paralelización y más recursos computacionales.
+          \item Para posición convexa el número de thrackles crece bastante
+            rápido, pero todavía es menor al calculado computacionalmente.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Trabajo futuro}
+  \begin{itemize}
     \item Los conjuntos de 8 y 9 puntos con mayor número de thrackles de tamaño
       máximo son el conjunto en posición convexa o conjuntos de puntos
       2-convexos.
@@ -395,6 +495,7 @@
       significativamente el tiempo de ejecución.
       \begin{itemize}
         \item ¿Se puede generalizar esta idea a posición general?
+        \item ¿Se puede modificar el Algoritmo 2 para tomar ventajas de esta generalización?
       \end{itemize}
   \end{itemize}
 \end{frame}
