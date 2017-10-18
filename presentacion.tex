@@ -30,25 +30,42 @@
 \title{Tamaño máximo de un thrackle de triángulos}
 \author [Santiago León O.] {Santiago León Ortiz\\ {\small Asesora: Dra. Dolores Lara Cuevas}}
 \institute [Cinvestav, Computación] { }
+\date{16 de octubre de 2017}
 
 \usetheme{Madrid}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
 \begin{document}
 \begin{frame}
-  \raisebox{-1cm}{%
-    \parbox[c]{3cm}{\centering%
-      \includegraphics[width=2cm]{cinvestavlogo.png}%
-    }%
-    \parbox[c]{\dimexpr\paperwidth-3cm\relax}{\centering%
-      {\Large Departamento de Computación\\ Cinvestav Zacatenco}%
-    }%
-  }%
+    \parbox[c]{2cm}{\centering
+      \includegraphics[width=1.5cm]{cinvestavlogo.png}
+    }
+    \parbox[c]{\dimexpr\paperwidth-3cm\relax}{\centering
+      {\large Departamento de Computación\\ Cinvestav Zacatenco}
+    }
   \maketitle
 \end{frame}
 
 \begin{frame}
   \frametitle{Thrackles de triángulos}
   \begin{figure}[htb]
-    \includegraphics{thrackles.pdf}
+    \includegraphics{examples.pdf}
   \end{figure}
 \end{frame}
 
@@ -59,6 +76,10 @@
     \includegraphics<1>{puntos.pdf}
     \includegraphics<2>{puntos_1.pdf}
   \end{figure}
+  \begin{block}{Posición general}
+    Conjuntos de puntos en los que no hay 3 en una misma
+    recta.
+  \end{block}
 \end{frame}
 
 \begin{frame}
@@ -70,6 +91,27 @@
   \begin{figure}[htb]
     \includegraphics<1>{tipos_de_orden.pdf}
     \includegraphics<2>{tipos_de_orden_1.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Base de datos de tipos de orden [O. Aichholzer]}
+  Hay una base de datos con conjuntos de $n$ puntos para cada tipo de orden.
+  Hasta $n=10$.
+  \begin{figure}[htb]
+    \includegraphics[width=0.8\textwidth]{base_de_datos.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gráfica geométrica}
+  \begin{block}{}
+    Es un dibujo de una gráfica en el plano euclidiano. Los vértices son
+    puntos en posición general, y las aristas son segmentos de recta.
+  \end{block}
+  \begin{figure}[htb]
+    \centering
+    \input{graficas_geometricas.pdf_tex}
   \end{figure}
 \end{frame}
 
@@ -145,16 +187,30 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Tamaño de un thrackle de triángulos}
+  \begin{block}{}
+    Atacamos el problema buscando cotas superiores e inferiores del tamaño
+    máximo de un thrackle de triángulos.
+  \end{block}
+  \begin{figure}[htb]
+    \centering
+    \input{cotas.pdf_tex}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
   \frametitle{¿Qué se sabe hasta ahora?, cota inferior}
-  Cualquier conjunto de $n$ puntos tiene al menos $\lceil\frac{n^2}{12}\rceil$ triángulos
-  disjuntos en aristas que contienen al mismo punto en su interior.
+  Cualquier conjunto de $n$ puntos tiene al menos $\lfloor\frac{n^2}{12}\rfloor$ triángulos
+  disjuntos en aristas que contienen al mismo punto en su interior
+
+  [J. Cano, L. Barba, T. Sakai and J. Urrutia].
   \begin{figure}[htb]
     \def\svgwidth{3cm}
     \input{triangulos_punto_interior.pdf_tex}
   \end{figure}
   \begin{itemize}[leftmargin=2cm]
     \item[$\implies$] Para todo conjunto de $n$ puntos en posición convexa, siempre existe un
-      thrackle con $\lceil\frac{n^2}{12}\rceil$ triángulos.
+      thrackle con $\lfloor\frac{n^2}{12}\rfloor$ triángulos.
   \end{itemize}
   Si $3|n$ entonces existe un thrackle con $\frac{n^2}{9}+1$ triángulos.
   \begin{itemize}[leftmargin=1cm]
@@ -165,7 +221,7 @@
 \begin{frame}
   \frametitle{¿Qué se sabe hasta ahora?, cota superior}
   Caracterización de los segmentos restantes en un conjunto de triángulos
-  disjuntos en aristas de tamaño máximo [H. Hanani 1975].
+  disjuntos en aristas de tamaño máximo [H. Hanani, 1975].
   \begin{figure}[htb]
     \scriptsize
     \input{hanani.pdf_tex}
@@ -180,20 +236,16 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Posición general}
-  Valor exacto del tamaño máximo de un thrackle $T_n$ en un conjunto de $n$
-  puntos para $3\le n\le 7$.
+  \frametitle{Posición general, $3\le n\le 7$}
   \begin{columns}
-    \hspace{0.7cm}
-    \begin{column}{0.6\textwidth}
-      \begin{center}
-      \begin{figure}[htb]
+      \hspace{0.1cm}
+    \begin{column}{0.45\textwidth}
+      \begin{teo}
+        El tamaño máximo de un thrackle $T_n$ en un conjunto de $n$
+        puntos para $3\le n\le 7$ es:
+
+        \vspace{0.5cm}
         \centering
-        \input{n_5_pos_general.pdf_tex}
-      \end{figure}
-      \end{center}
-    \end{column}
-    \begin{column}{0.2\textwidth}
         \begin{tabular}{| c | c |}
           \hline
           \textbf{$n$} & \textbf{$T_n$} \\ \hline
@@ -203,15 +255,25 @@
           6 & 4 \\ \hline
           7 & 7 \\ \hline
         \end{tabular}
+        \vspace{0.5cm}
+      \end{teo}
     \end{column}
     \hfill
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+      \begin{figure}[htb]
+        \centering
+        \input{n_5_pos_general.pdf_tex}
+      \end{figure}
+      \end{center}
+    \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Posición general, $n=8$}
   Algoritmo de backtracking para determinar que el tamaño máximo de un thrackle
-  sobre un conjunto de 8 puntos.
+  sobre todo conjunto de 8 puntos.
   \begin{itemize}
     \item Por la cota superior debe haber a lo sumo 8 triángulos.
     \item La cota inferior más alta, ignorando que $3\nmid8$ es $\sim8$.
@@ -249,8 +311,8 @@
 
 \begin{frame}
   \frametitle{Resultados de la ejecución, para $n=8$}
-  La ejecución del Algoritmo 1 para cada conjunto de puntos, utilizando un
-  procesador Intel Core i7, arrojó los siguientes resultados:
+  La ejecución del Algoritmo 1 para cada uno de los 3315 conjunto de puntos,
+  utilizando un procesador Intel Core i7, arrojó los siguientes resultados:
   \begin{itemize}[leftmargin=1cm]
     \item Existe un thrackle de tamaño 8 para cada conjunto de 8 puntos.
     \item Nodos recorridos: $\sim$7,838.63 en promedio
@@ -260,8 +322,15 @@
   \pause
   \vspace{0.5cm}
   \begin{teo}
-    Un thrackle sobre un conjunto de 8 puntos tiene máximo 8 triángulos.
+    Todo thrackle sobre cualquier conjunto de 8 puntos tiene máximo 8~triángulos.
   \end{teo}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Árbol de búsqueda, para $n=8$}
+  \begin{figure}[htb]
+    \includegraphics[width=0.9\textwidth]{n_8_thr_first.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -273,26 +342,28 @@
   completamente y almacena el tamaño máximo de los thrackles.
   \vspace{0.3cm}
 
-  La ejecución tuvo las siguientes características:
+  La ejecución sobre los 158,817 conjuntos de puntos, tuvo las siguientes
+  características:
   \begin{itemize}[leftmargin=1cm]
-    \item Nodos: $\sim2,526,172.5$ nodos en promedio
     \item Tiempo: $\sim9$ horas 57 minutos (225.5 ms en promedio)
+    \item Nodos: $\sim$2,526,172.5 nodos en promedio
     \item Memoria: Máximo $148.8$ MB por conjunto de puntos
   \end{itemize}
 
   \vspace{0.3cm}
   \pause
   \begin{teo}
-    Un thrackle sobre un conjunto de 9 puntos tiene máximo 10 triángulos.
+    Todo thrackle sobre cualquier conjunto de 9 puntos tiene máximo
+    10~triángulos.
   \end{teo}
 \end{frame}
 
-%\begin{frame}
-%  \frametitle{Algoritmo de backtracking 2}
-%  \begin{figure}[htb]
-%    \includegraphics<1>{alg_1_13.pdf}
-%  \end{figure}
-%\end{frame}
+\begin{frame}
+  \frametitle{Árbol de búsqueda, para $n=9$}
+  \begin{figure}[htb]
+    \includegraphics[width=\textwidth]{n_9_thr_full.png}
+  \end{figure}
+\end{frame}
 
 \begin{frame}
   \frametitle{Posición general, $n=10$}
@@ -303,7 +374,7 @@
     \item Tiempo: 12.86 segundos
     \item Memoria: 8.87 GB
       \begin{itemize}[leftmargin=1.5cm]
-        \item[$\implies$] 5.84 años para explorar todos los conjuntos de puntos.
+        \item[$\implies$] 5.84 años para explorar los 14,309,547 conjuntos de puntos.
       \end{itemize}
   \end{itemize}
   \begin{overprint}
@@ -346,6 +417,7 @@
       Los conjuntos de puntos con mayor número de thrackles son 2-convexos
     \end{conj}
   \end{overprint}
+  \vspace{0.2cm}
   \begin{figure}[htb]
     \centering
     \def\svgwidth{10cm}
@@ -359,13 +431,6 @@
   \end{center}
 \end{frame}
 
-%\begin{figure}[htb]
-%  \centering
-%  \def\svgwidth{5cm}
-%  \input{3_n.pdf_tex}
-%  \caption{Thrackle con $\frac{n^2}{9}+1$ triángulos cuando $3|n$.}
-%\end{figure}
-
 \begin{frame}[t]
   \frametitle{Construcción para todo $n$}
   Se extendió la cota inferior del tamaño de un thrackle, para incluir los
@@ -376,7 +441,15 @@
       \centering
       \begin{figure}
         \def\svgwidth{5cm}
-        \input{3_n.pdf_tex}
+        \only<1>{\input{3_n_1.pdf_tex}}
+        \only<2>{\input{3_n_2.pdf_tex}}
+        \only<3>{\input{3_n_3.pdf_tex}}
+        \only<4>{\input{3_n_4.pdf_tex}}
+        \only<5>{\input{3_n_5.pdf_tex}}
+        \only<6>{\input{3_n_6.pdf_tex}}
+        \only<7>{\input{3_n_7.pdf_tex}}
+        \only<8>{\input{3_n_8.pdf_tex}}
+        \only<9>{\input{3_n_9.pdf_tex}}
         Caso $3|n$.
       \end{figure}
     \end{column}
@@ -400,7 +473,16 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Número de thrackles para posición convexa}
+  \frametitle{Número de 1-factorizaciones de $K_{n,n}$}
+  \centering
+  \begin{figure}
+    \def\svgwidth{10cm}
+    \input{T.pdf_tex}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Número mínimo de thrackles}
   Determinamos cuántos thrackles distintos tiene un conjunto de $n$ puntos en
   posición convexa.
 
@@ -423,13 +505,13 @@
       \end{center}
     \end{column}
     \begin{column}{0.7\textwidth}
-      \begin{block}{Número mínimo de thrackles}
+      \begin{teo}
         Hay al menos
         $$(p(n/3)-p(n/3-1))\frac{(\frac{n}{3})!\cdot6^{\frac{n}{3}-2}\cdot2^{\frac{n}{6}-1}}{(\frac{n}{6})!\binom{n/3}{2}}$$
         thrackles de triángulos distintos, para $n$ puntos en posición
         convexa con $6|n$. Donde $p(n)$ es el número de formas de sumar $n$
         (función de partición).
-      \end{block}
+      \end{teo}
     \end{column}
   \end{columns}
 \end{frame}
@@ -454,8 +536,8 @@
       \input{orden_triangulos_2.pdf_tex}
     \end{figure}
     \begin{itemize}
-      \item Acelera búsquedas utilizando el Algoritmo 1 (pero no del Algoritmo 2).
-      \item ¿Puede generalizarse a conjuntos de puntos en posición convexa?
+      \item Acelera búsquedas utilizando el Algoritmo 1.
+      \item ¿Puede generalizarse a conjuntos de puntos en posición general?
     \end{itemize}
   \end{overprint}
 \end{frame}
@@ -468,29 +550,37 @@
       conjeturado de $\frac{n^2}{9}+2$.
       \begin{itemize}
           \item La conjetura es cierta para $3\le n\le 9$.
-          \item La cota inferior hallada nunca excede el valor conjeturado pero
-            es cercana.
+          \item No encontramos un contraejemplo, pero la cota inferior se acerca
+            al valor conjeturado.
       \end{itemize}
     \item La complejidad computacional de una búsqueda exhaustiva crece bastante
       rápido.
       \begin{itemize}
           \item Para $n=10$ se podría realizar una búsqueda utilizando
             paralelización y más recursos computacionales.
-          \item Para posición convexa el número de thrackles crece bastante
-            rápido, pero todavía es menor al calculado computacionalmente.
+          \item Para posición convexa obtuvimos una cota inferior para todo
+            $n$, pero todavía es menor al calculado computacionalmente.
       \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Trabajo futuro}
+  Caracterización del resto de un thrackle de triángulos.
+  \begin{figure}
+    \includegraphics{resto_thrackles.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Trabajo futuro}
   \begin{itemize}
-    \item Los conjuntos de 8 y 9 puntos con mayor número de thrackles de tamaño
-      máximo son el conjunto en posición convexa o conjuntos de puntos
-      2-convexos.
+    \item Los conjuntos de 8 y 9 puntos con mayor número de thrackles maximales
+      distintos conjuntos de puntos 2-convexos.
       \begin{itemize}
         \item ¿Es esto cierto para todo $n$?
       \end{itemize}
+      \vspace{0.5cm}
     \item El orden de los triángulos en posición convexa reduce
       significativamente el tiempo de ejecución.
       \begin{itemize}
@@ -498,6 +588,15 @@
         \item ¿Se puede modificar el Algoritmo 2 para tomar ventajas de esta generalización?
       \end{itemize}
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Código fuente}
+  \begin{figure}[htb]
+    \includegraphics[width=0.7\textwidth]{aplicacion.png}
+
+    \url{http://github.com/cinvestavcs-mexicocity/Triangle-thrackles}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[c]
